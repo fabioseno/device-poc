@@ -1,0 +1,21 @@
+<ion-nav-bar class="bar-energized">
+    <ion-view class="device" view-title="Teste de bipagem">
+        <ion-content class="cart-content">
+            <div class="item item-input item-icon-right">
+                <span class="input-label">Ativar leitor</span>
+                <i class="icon ion-qr-scanner" data-ng-click="vm.scanCode();"></i>
+            </div>
+            <div class="item item-input item-icon-right">
+                <span class="input-label">Tempo médio (ms)</span>
+                <span data-ng-bind="vm.getAverageTime()"></span>
+                <i class="icon ion-trash-a" data-ng-click="vm.clearList();"></i>
+            </div>
+            <div class="list card" data-ng-show="vm.skus.length > 0">
+                <div class="item" data-ng-repeat="sku in vm.skus track by $index">
+                    <b>Cód.: </b><span data-ng-bind="sku.sku"></span>
+                    <span style="float:right;"><span style="color:red;" class="reference">{{ sku.scanTime }} ms</span></span>
+                </div>
+            </div>
+        </ion-content>
+    </ion-view>
+</ion-nav-bar>

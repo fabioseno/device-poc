@@ -1,0 +1,82 @@
+.device .content {
+    height:100%;
+    background-color: black;
+}
+
+.device .content .home {
+    text-align: center;
+    position: relative;
+    top: 40%;
+    transform: translateY(-40%);
+    -moz-transform: translateY(-40%);
+    -webkit-transform: translateY(-40%);
+    -ms-transform: translateY(-40%);
+    -o-transform: translateY(-40%);
+}
+
+.device .content .home img {
+    width: 20%;
+}
+
+.device .content .home p {
+    color: white;
+}
+
+.device .context-header {
+    height: 40%;
+}
+
+.device .context-header-ccr {
+    background: #000 url('../../assets/images/ccr.jpg') no-repeat center center;
+}
+
+.device .cart-content {
+    background: #fff url('../../assets/images/bag.jpg') no-repeat center center;
+    background-size: contain;
+}
+
+.device .product-header {
+    width: 100%;
+    clear: both;
+}
+
+.device .product-body {
+    white-space: normal;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.device .product-body .details {
+    -webkit-flex: 1;
+    flex: 1;
+}
+
+.device .product-body .reference {
+    font-size: 13px;
+}
+
+.device .image {
+    text-align: center;
+}
+
+.device .image .product-small {
+    width: 100px;
+}
+
+.device .bag-header {
+    
+}
+
+.device .bag-header .bag-info {
+    float: left;
+}
+
+.device .bag-header button {
+    float: right;
+    font-size: 45px;
+    color: black;
+}
+
+.device .item-icon-right input {
+  margin-right: 90px;
+}
