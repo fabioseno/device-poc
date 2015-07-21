@@ -1,0 +1,54 @@
+<ion-view class="product-details" view-title="Busca de Produto">
+    <ion-content>
+        <div class="list">
+            <label class="item item-input" data-ng-show="vm.product.name">
+                <span class="input-label">Código pai</span>
+                <input type="tel" placeholder="Código pai" data-ng-model="vm.product.productCode" ng-change="vm.findProduct();" data-ng-model-options="{updateOn: 'blur'}" />
+            </label>
+            <div class="item item-input item-icon-right">
+                <span class="input-label">SKU</span>
+                <input type="tel" placeholder="SKU" data-ng-model="vm.selectedSKU.sku" data-ng-change="vm.findProduct();" data-ng-model-options="{updateOn: 'blur'}" />
+                <i class="icon ion-qr-scanner" data-ng-click="vm.scanCode();"></i>
+            </div>
+            <div class="item item-input" data-ng-show="vm.product.colors && vm.product.colors.length > 0">
+                <div class="attributes">
+                    <div class="attribute" data-ng-class="{ 'selected-attribute' : vm.selectedSKU.color.id === color.id }" data-ng-click="vm.setAttribute('color', color);" data-ng-repeat="color in vm.product.colors">
+                        <img class="color" data-ng-src="{{ color.url }}">
+                        <span data-ng-bind="color.name"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="item item-input" data-ng-show="vm.product.sizes && vm.product.sizes.length > 0">
+                <div class="attributes">
+                    <div class="attribute size-attribute" data-ng-class="{ 'selected-attribute' : vm.selectedSKU.size.name === size.name, 'disabled-attribute' : size.disabled }" data-ng-click="vm.setAttribute('size', size);" data-ng-repeat="size in vm.product.sizes">
+                        <div class="size" data-ng-bind="size.name"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="list card" data-ng-show="vm.product.name">
+            <div class="item image" data-ng-show="vm.product.pictureUrl" data-ng-click="vm.showImage(vm.product.productCode, vm.selectedSKU.color.id);">
+                <img data-ng-src="{{ vm.product.pictureUrl }}">
+            </div>
+            <label class="item item-text-wrap">
+                <span data-ng-bind="vm.product.name"></span>
+            </label>
+            <label class="item item-input" data-ng-show="vm.product.structure.division.name">
+                <span class="input-label">Categoria</span>
+                <span>{{ vm.product.structure.division.name }} / {{ vm.product.structure.group.name }}</span>
+            </label>
+            <label class="item item-input" data-ng-show="vm.product.color">
+                <span class="input-label">Cor</span>
+                <span data-ng-bind="vm.product.color.name"></span>
+            </label>
+            <label class="item item-input" data-ng-show="vm.product.size">
+                <span class="input-label">Tamanho</span>
+                <span data-ng-bind="vm.product.size.name"></span>
+            </label>
+            <label class="item item-input" data-ng-show="vm.product.price">
+                <span class="input-label">Preço</span>
+                <span data-ng-bind="vm.product.price | currency : 'R$ '"></span>
+            </label>
+        </div>
+    </ion-content>
+</ion-view>

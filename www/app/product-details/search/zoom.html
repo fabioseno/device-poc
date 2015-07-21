@@ -1,0 +1,10 @@
+<ion-view view-title="Zoom">
+    <ion-nav-buttons class="button button-clear button-positive" side="primary">
+        <button class="button button-clear" nav-direction="back" data-ng-click="vm.goBack();">voltar</button>
+    </ion-nav-buttons>
+    <ion-content scroll="false" class="padding" data-ng-show="vm.pictureZoomUrl">
+        <ion-scroll zooming="true" direction="xy" delegate-handle="zoom-pane" class="zoom-pane" min-zoom="1" scrollbar-x="false" scrollbar-y="false">
+            <img data-ng-src="{{ vm.pictureZoomUrl }}"/>
+        </ion-scroll>
+    </ion-content>
+</ion-view>

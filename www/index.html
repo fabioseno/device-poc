@@ -7,6 +7,7 @@
 
         <link href="lib/ionic/css/ionic.css" rel="stylesheet">
 
+        <link href="app/product-details/assets/css/product-details.css" rel="stylesheet">
         <link href="app/device/assets/css/device.css" rel="stylesheet">
         
         <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
@@ -18,9 +19,17 @@
 
         <!-- cordova script (this will be a 404 during development) -->
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="cordova_mock.js"></script>
+<!--        <script type="text/javascript" src="cordova_mock.js"></script>-->
+        
+        <script type="text/javascript" src="lib/webtree/core_0.1.0.min.js"></script>
+
         
         <!-- ## Utility Modules ## -->
+        
+        <!-- Retail module -->
+        <script type="text/javascript" src="retail/retail.js"></script>
+        <script type="text/javascript" src="retail/product/orderBySize.js"></script>
+        <script type="text/javascript" src="retail/product/productManager.js"></script>
 
         <!-- Visual module -->
         <script type="text/javascript" src="visual/visual.js"></script>
@@ -30,7 +39,13 @@
 
         <!-- POC application module -->
         <script type="text/javascript" src="app/base/app.js"></script>
+        <script type="text/javascript" src="app/base/config/endpoints.js"></script>
         
+        <!-- Product details application module -->
+        <script type="text/javascript" src="app/product-details/productDetails.js"></script>
+        <script type="text/javascript" src="app/product-details/search/search.js"></script>
+        <script type="text/javascript" src="app/product-details/search/zoom.js"></script>
+
         <!-- Device application module -->
         <script type="text/javascript" src="app/device/device.js"></script>
         <script type="text/javascript" src="app/device/search/search.js"></script>

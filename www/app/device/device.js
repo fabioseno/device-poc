@@ -2,9 +2,13 @@
 angular.module('rn-device', ['ionic']).config(['$stateProvider', function ($stateProvider) {
     'use strict';
 
-    $stateProvider.state('device', {
+    $stateProvider.state('app.tab.device', {
         url: "/device/search",
-        templateUrl: "app/device/search/search.html",
-        controller: 'rn-device.search as vm'
+        views: {
+            'tab-device': {
+                templateUrl: "app/device/search/search.html",
+                controller: 'rn-device.search as vm'
+            }
+        }
     });
 }]);
