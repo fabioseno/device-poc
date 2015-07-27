@@ -2,6 +2,7 @@
     "jscodehints.detectedExclusions": [
         "/Users/seno/projects/renner-poc/www/app/base/common/common.js",
         "/Users/seno/projects/renner-poc/www/cordova_mock.js",
-        "/Users/seno/projects/renner-poc/www/app/replenishment/request/details.js"
+        "/Users/seno/projects/renner-poc/www/app/replenishment/request/details.js",
+        "D:/Fabio/Projetos/Ionic/device-poc/platforms/android/build/intermediates/assets/debug/www/plugins/org.apache.cordova.vibration/www/vibration.js"
     ]
 }

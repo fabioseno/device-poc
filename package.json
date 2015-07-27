@@ -1,5 +1,5 @@
 {
-  "name": "renner-poc",
+  "name": "device-poc",
   "version": "1.0.0",
   "description": "renner-poc: An Ionic project",
   "dependencies": {
@@ -29,7 +29,8 @@
     {
       "locator": "https://github.com/leecrossley/cordova-plugin-shake.git",
       "id": "cordova-plugin-shake"
-    }
+    },
+    "cordova-plugin-camera"
   ],
   "cordovaPlatforms": [
     "ios",
