@@ -10,7 +10,12 @@ angular.module('rn-poc', ['ionic', 'wt-core', 'rn-visual', 'rn-retail', 'rn-devi
             StatusBar.styleDefault();
         }
     });
-    
+
+    $ionicPlatform.registerBackButtonAction(function(e) {
+        //do your stuff
+        e.preventDefault();
+    }, 101);
+
     invoker.setConfiguration(appConfig);
 
 }]).config(['$stateProvider', '$urlRouterProvider', '$ionicConfigProvider', function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {

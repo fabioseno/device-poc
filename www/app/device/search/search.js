@@ -57,8 +57,8 @@
                             
                             $timeout(function () {
                                 vm.scanCode();
-                            });
-                        });
+                            }, 100);
+                        }, 50);
                     }
                 },
                 function () {
